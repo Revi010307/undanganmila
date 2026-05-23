@@ -1,0 +1,599 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Engagement Invitation</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FONT ELEGANT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Italiana&display=swap"
+        rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Amsterdam';
+            src: url('Amsterdam Signature.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf7;
+            color: #8d6a1f;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            height: 100vh;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+                url('Bg2.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            text-align: center;
+            padding: 20px;
+
+            color: ##580303(64, 4, 4);
+        }
+
+        /* HERO TITLE */
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 75px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            margin: 8px 0;
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 14px 28px;
+            border: none;
+            background: #000000;
+            color: rgb(153, 121, 53);
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* TITLE */
+        .title {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            color: #a4622c;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            background: rgb(74, 3, 3);
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .08);
+        }
+
+        .couple {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .person {
+            width: 250px;
+        }
+
+        .person img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .time-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 90px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+            display: block;
+        }
+        }
+
+        iframe {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: #f4e1d2;
+            overflow: hidden;
+        }
+
+        .footer p {
+            margin-top: 10px;
+            margin-bottom: 25px;
+            color: #4f0202;
+        }
+
+        .loop-wrapper {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .looping-text {
+            white-space: nowrap;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #b08968;
+            animation: marquee 12s linear infinite;
+            padding-left: 100%;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .music-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #9b642d;
+            color: white;
+            border: none;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* OPENING */
+        .opening {
+            position: fixed;
+            inset: 0;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+                url('Bg3.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            color: rgb(153, 121, 53);
+            z-index: 9999;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            text-align: center;
+            padding: 20px;
+        }
+
+        .opening h2 {
+            font-family: 'Italiana', serif;
+            font-size: 70px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: rgb(153, 121, 53);
+            ;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, .7);
+        }
+
+        .opening p {
+            color: rgb(155, 128, 48);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, .7);
+        }
+
+        @media(max-width:600px) {
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .opening h2 {
+                font-size: 50px;
+            }
+
+            .title {
+                font-size: 35px;
+            }
+
+        }
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+    <!-- OPENING -->
+    <div class="opening" id="opening">
+        <p>The Engagement Of</p>
+        <h2>Syair & Revi</h2>
+        <p>To</p>
+        <p>MILA</p>
+
+
+
+        <button class="btn" onclick="openInvitation()">
+            Open Invitation
+        </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <p>The Engagement Of</p>
+        <h1>Syair & Revi</h1>
+        <p>Friday, 05 June 2026</p>
+    </section>
+
+    <!-- COUPLE -->
+    <section>
+        <h2 class="title">The Couple</h2>
+
+        <div class="couple">
+
+            <div class="person">
+                <img src="yudis2.jpeg">
+                <h3>Syair Ambiya Husein</h3>
+            </div>
+
+            <div class="person">
+                <img src="revi1.jpeg">
+                <h3>Revi Tiarawati</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section style="background:#580303;">
+        <h2 class="title">Counting Down to Our Special Day</h2>
+
+        <div class="countdown">
+            <div class="time-box">
+                <h1 id="days">0</h1>
+                <p>Day</p>
+            </div>
+
+            <div class="time-box">
+                <h1 id="hours">0</h1>
+                <p>hours</p>
+            </div>
+
+            <div class="time-box">
+                <h1 id="minutes">0</h1>
+                <p>minutes</p>
+            </div>
+
+            <div class="time-box">
+                <h1 id="seconds">0</h1>
+                <p>seconds</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- GALLERY -->
+    <section>
+        <h2 class="title">Gallery</h2>
+
+        <div class="gallery">
+            <img src="1.jpeg">
+            <img src="CINCIN">
+            <img src="3.jpeg">
+
+
+        </div>
+    </section>
+
+    <!-- EVENT -->
+    <section style="background:rgb(49, 2, 2);">
+        <div class="card">
+            <h2 class="title">Engagement Event</h2>
+
+            <p>Friday, 05 June 2026</p>
+            <p>13.00 WIB - Selesai</p>
+
+            <br>
+
+            <p>Perumahan Hijra Sukamukti Tahap 1 Blok C2 Kec. Banyuresmi Kab. Garut</p>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section>
+        <h2 class="title">Location</h2>
+
+        <iframe src="https://www.google.com/maps?q=Perumahan+Hijra+Sukamukti+Tahap+1+Blok+C2+Garut&output=embed"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- WISHES -->
+    <section style="background:rgb(49, 2, 2);">
+
+        <h2 class="title">Wishes</h2>
+
+        <div class="card">
+
+            <form id="wishForm">
+
+                <input type="text" id="name" placeholder="Nama" required>
+
+                <textarea id="message" rows="5" placeholder="Tulis ucapan..." required></textarea>
+
+                <button class="btn" type="submit">
+                    Send
+                </button>
+
+            </form>
+
+            <!-- TEMPAT UCAPAN -->
+            <div id="wishList"></div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <h2 class="title">Thank You</h2>
+
+        <p>
+            Thank you for being part of our special engagement day.
+            Your presence means a lot to us.
+        </p>
+
+        <div class="loop-wrapper">
+            <div class="looping-text">
+                BY REVI TIARAWATI • BY REVI TIARAWATI •
+                BY REVI TIARAWATI • BY REVI TIARAWATI •
+                BY REVI TIARAWATI
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- MUSIC -->
+    <audio id="music" loop>
+        <source src="LAGU.mpeg" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" onclick="toggleMusic()">
+        ♫
+    </button>
+
+    <script>
+
+        // OPEN INVITATION
+        function openInvitation() {
+            document.getElementById('opening').style.display = 'none';
+            document.getElementById('music').play();
+        }
+
+        // MUSIC
+        const music = document.getElementById('music');
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        // GUEST NAME FROM URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const to = urlParams.get('to');
+
+        if (to) {
+            document.getElementById('guestName').innerText = to; YUDIS
+        }
+
+
+        // COUNTDOWN
+        const targetDate = new Date("2026-06-05T13:00:00").getTime();
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24))
+                / (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60))
+                / (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60))
+                / 1000
+            );
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // Jika waktu habis
+            if (distance < 0) {
+
+                clearInterval(interval);
+
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+            }
+        }
+
+        updateCountdown();
+
+        const interval = setInterval(updateCountdown, 1000);
+
+    </script>
+    <script>
+
+        const form = document.getElementById("wishForm");
+        const wishList = document.getElementById("wishList");
+
+        // LOAD DATA SAAT WEB DIBUKA
+        let wishes = JSON.parse(localStorage.getItem("wishes")) || [];
+
+        function displayWishes() {
+
+            wishList.innerHTML = "";
+
+            wishes.forEach(wish => {
+
+                const box = document.createElement("div");
+
+                box.style.background = "#fff";
+                box.style.padding = "15px";
+                box.style.marginTop = "15px";
+                box.style.borderRadius = "12px";
+                box.style.textAlign = "left";
+                box.style.boxShadow = "0 3px 10px rgba(0,0,0,0.08)";
+
+                box.innerHTML = `
+                <h4>${wish.name}</h4>
+                <p>${wish.message}</p>
+            `;
+
+                wishList.prepend(box);
+
+            });
+
+        }
+
+        // TAMPILKAN AWAL
+        displayWishes();
+
+        // SAAT FORM DIKIRIM
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            // simpan data
+            wishes.push({
+                name: name,
+                message: message
+            });
+
+            // simpan ke localStorage
+            localStorage.setItem("wishes", JSON.stringify(wishes));
+
+            // refresh tampilan
+            displayWishes();
+
+            // reset form
+            form.reset();
+
+        });
+
+    </script>
+</body>
+
+</html>
